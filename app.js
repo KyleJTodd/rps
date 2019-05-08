@@ -22,10 +22,10 @@ function generateRandomNum() {
   return Math.floor(Math.random() * 3)
 }
 
-function display(userChoice) {
-  let template = `
-   <h3>Computer Choice: ${userChoice}</h3>`
-  document.getElementById("compChoice").innerHTML = template
+function display(compChoice, result) {
+
+  document.getElementById("compChoice").innerHTML = compChoice
+  document.getElementById("winner").innerHTML = result
 }
 
 //randomization attempt
@@ -56,6 +56,7 @@ function choiceIn(userChoice) {
       result = "you win"
     }
   }
+  display(computerChoice, result)
 
   // let choiceOut = (Math.ceil(3 * Math.random()))
   // if (choiceOut == 1) {
